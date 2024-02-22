@@ -311,20 +311,56 @@ textarea:not([rows]) {
     background-color: var(--body-background);
   }
 
-  .wd_item-1,
-  .wd_item-2,
-  .wd_item-3{
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 1.5rem;
-  }
+  
+
 
   /*.....media screen.....*/
+
+    /*....for mobile......*/
+    .wd_item-1,
+    .wd_item-2,
+    .wd_item-3{
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
+
+    .wd_heading > h2{
+      color: var(--heading-color);
+      text-align: center;
+      font-size: var(--sm-font);
+      margin-top: 0;
+      padding-top: 1.2rem;
+      text-transform: uppercase;
+    }
+  
+    .wd_heading > p{
+      color: var(--pargraph-color);
+      text-align:center;
+      font-size: 1rem;
+      line-height: 1.0;
+    }
+
+    .wd_heading > p{
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .wd_heading > hr{
+      width: 60px;
+      opacity: 0.3 ;
+       text-align: center;
+       border-color: var(--main-color);
+       
+    }
+  
 
   /*....for desktop......*/
 
   @media (min-width: 960px) {
-    
+   
+
   .wd_heading{
     max-width: 650px;
    margin: 0 auto;
@@ -332,7 +368,6 @@ textarea:not([rows]) {
   }
 
   .wd_heading > h2{
-    color: var(--heading-color);
     text-align: center;
     font-size: var(--lg-font);
     margin-top: 0;
@@ -341,7 +376,6 @@ textarea:not([rows]) {
   }
 
   .wd_heading > p{
-    color: var(--pargraph-color);
     text-align: center;
     font-size: 1.7rem;
     line-height: 1.2;
@@ -402,7 +436,7 @@ textarea:not([rows]) {
 
    .wd-item-2_text{
     text-align: end;
-    padding: 1rem 2rem;
+   padding: 1rem 2rem;
     text-size-adjust: 100%;
     text-decoration-thickness: auto;
     text-decoration-style: solid;
