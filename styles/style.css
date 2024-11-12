@@ -17,6 +17,7 @@
     /*font sizes*/
 
     --font-logo: 2.43rem;
+    --font-logo-mobile: 1.43rem;
     --xxl-font: 7.6rem;
     --xl-font: 2.88rem;
     --lg-font: 2.19rem;
@@ -99,10 +100,12 @@ textarea:not([rows]) {
   /*Styling Navbar*/
 
   .logo_text{
-    font-size: var(--font-logo);
+    font-size: var(--font-logo-mobile);
     color: var(--main-color);
     font-weight: 700;
+    padding: 0.5rem 0.5rem 0.5rem 0;
   }
+
   .logo_text, a{
     text-decoration: none;
   }
@@ -163,6 +166,10 @@ textarea:not([rows]) {
 
   /*for tab*/
   @media (min-width:760px)  {
+
+    .logo_text{
+      font-size: var(--font-logo);
+    }
     .nav-list_container{
       display: block;
     }
@@ -325,7 +332,9 @@ textarea:not([rows]) {
       padding: 1rem;
     }
 
-    .wd_heading > h2{
+    .wd_heading > h2,
+    .hiw_heading > h2,
+    .rpi_heading > h2{
       color: var(--heading-color);
       text-align: center;
       font-size: var(--sm-font);
@@ -334,20 +343,25 @@ textarea:not([rows]) {
       text-transform: uppercase;
     }
   
-    .wd_heading > p{
+    .wd_heading > p,
+    .hiw_heading > p,
+    .rpi_heading > p{
       color: var(--pargraph-color);
       text-align:center;
       font-size: 1rem;
       line-height: 1.0;
     }
 
-    .wd_heading > p{
+    /* .wd_heading > p,
+    .hiw_heading > p,
+    .rpi_heading > p{
       text-align: center;
       font-size: 1rem;
       line-height: 1;
-    }
+    } */
 
-    .wd_heading > hr{
+    .wd_heading > hr,
+    .hiw_heading > hr{
       width: 60px;
       opacity: 0.3 ;
        text-align: center;
@@ -361,13 +375,16 @@ textarea:not([rows]) {
   @media (min-width: 960px) {
    
 
-  .wd_heading{
+  .wd_heading,
+  .rpi_heading{
     max-width: 650px;
    margin: 0 auto;
    line-height: 24px;
   }
 
-  .wd_heading > h2{
+  .wd_heading > h2,
+  .hiw_heading > h2,
+  .rpi_heading > h2{
     text-align: center;
     font-size: var(--lg-font);
     margin-top: 0;
@@ -375,13 +392,17 @@ textarea:not([rows]) {
     text-transform: uppercase;
   }
 
-  .wd_heading > p{
+  .wd_heading > p,
+  .hiw_heading > p,
+  .rpi_heading > p{
     text-align: center;
     font-size: 1.7rem;
     line-height: 1.2;
   }
 
-  .wd_heading > hr{
+  .wd_heading > hr,
+  .hiw_heading > hr,
+  .rpi-bookacall_div > hr{
     width: 120px;
     opacity: 0.3 ;
      text-align: center;
@@ -450,3 +471,204 @@ textarea:not([rows]) {
     margin-left: 2rem;
    }
   }
+
+ /*......How it works section Styles......*/
+
+ .hiw{
+  background-color: var(--clear-text);
+
+ }
+
+ .hiw_step{
+  padding: 1.5rem;
+ }
+
+  .hiw_step-1-num,
+  .hiw_step-2-num,
+  .hiw_step-3-num{
+    display: flex;
+    flex-direction: column;
+    line-height: 5px;
+    margin-top: 1.5rem;
+  }
+
+  .hiw_step-1,
+ .hiw_step-2,
+ .hiw_step-3{
+  max-width: 700px;
+ margin: 0 auto;
+ line-height: 24px;
+ display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: .2fr 1fr;
+  align-items: center;
+}
+
+ 
+.step{
+  font-size: var(--sm-font);
+  color: var(--pargraph-color);
+  margin-block-start: 0.5rem;
+  margin-block-end: 0.5rem;
+}
+  
+.num{
+  font-size: var(--xxl-font);
+  color: var(--onboarding);
+  margin-block-start: 3.5rem;
+  font-weight: 700;
+}
+
+.step-text-heading{
+  font-size:1.65rem;
+  text-transform: uppercase;
+  color: var(--pargraph-color);
+  line-height: 2.2rem;
+}
+
+.step-text{
+  font-size: var(--xsm-font);
+  color: var(--pargraph-color);
+}
+
+.hiw_step-1-text,
+.hiw_step-2-text,
+.hiw_step-3-text{
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.learn-more{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 4rem;
+
+
+}
+
+.learn-more > p{
+  font-size: var(--sm-font);
+  color: var(--pargraph-color);
+  margin-bottom: 2.5rem;
+}
+
+.hiw_button a{
+  color: var(--clear-text);
+  font-size: 1.5rem;
+}
+
+.hiw_button-1{
+  background: var(--onboarding);
+  margin-right: 0.8rem;
+  padding: 1rem 0.7rem;
+  border-radius: 12px;
+  transition: 0.5s;
+}
+
+.hiw_button-1:hover{
+  background: #4e5955;
+}
+
+.hiw_button-2{
+  background: var(--ourprocess);
+  padding: 1rem 0.7rem;
+  border-radius: 12px;
+  transition: 0.5s;
+}
+
+.hiw_button-2:hover{
+  background:  #4f665c;
+}
+
+
+.hiw_button-3{
+  background: var(--bookcall);
+  margin-left: 0.8rem;
+  padding: 1rem 0.7rem;
+  border-radius: 12px;
+  transition: 0.5s;
+}
+
+.hiw_button-3:hover{
+  background: #77715b;
+}
+
+/*......Request Pricing Information section Styles......*/
+
+
+.big-box{
+  display: flex;
+  gap: 1.2rem;
+  align-items:start;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.otc-content-box-1,
+.otc-content-box-2{
+  width: 300px;
+  /* height: 600px; */
+  background-color: var(--clear-text);
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 1px 2px 3px 1.5px rgba(162, 162, 162, 0.4);
+  color: var(--text-color);
+}
+
+.success-img{
+  /* width: 25px;
+  height: 25px; */
+  max-width: 100%;
+}
+
+.success-divider{
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-img-div{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+}
+
+.success-content-div{
+  width: 160px;
+}
+
+
+.success-content-p{
+  text-align: start;
+}
+
+.rpi-bookacall_div{
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rpi-bookacall_div > a{
+  margin-bottom: 2.5rem;
+}
+
+.otc-content-heading > h3{
+  text-transform: uppercase;
+  color: var(--red-text);
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.otc-content-heading > hr{
+  border-style: dashed;
+  border-color: rgba(144, 143, 143, 0.38);
+}
