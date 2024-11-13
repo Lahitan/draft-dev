@@ -334,7 +334,10 @@ textarea:not([rows]) {
 
     .wd_heading > h2,
     .hiw_heading > h2,
-    .rpi_heading > h2{
+    .rpi_heading > h2,
+    .wcs_header > h2,
+    .cs_header > h2,
+    .faq_header > h2{
       color: var(--heading-color);
       text-align: center;
       font-size: var(--sm-font);
@@ -384,7 +387,9 @@ textarea:not([rows]) {
 
   .wd_heading > h2,
   .hiw_heading > h2,
-  .rpi_heading > h2{
+  .rpi_heading > h2,
+  .wcs_header > h2,
+  .cs-header > h2{
     text-align: center;
     font-size: var(--lg-font);
     margin-top: 0;
@@ -671,4 +676,254 @@ padding: 4rem;
 .otc-content-heading > hr{
   border-style: dashed;
   border-color: rgba(144, 143, 143, 0.38);
+}
+
+
+/*......What Our Clients Are Saying section Styles......*/
+
+.wcs{
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wcs_container{
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+  
+}
+
+.wcs_container .wcs_contents-wraper{
+  width: 70%;
+  min-height: inherit;
+  margin: 30px auto;
+  text-align: center;
+  overflow: hidden;
+  
+
+}
+
+.wcs_contents-wraper .test-row{
+  width: 100%;
+  min-height: inherit;
+  position: relative;
+}
+
+.test-row .test-item{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.test-row .test-item:not(.active){
+  top: 0;
+  left: -130%; 
+}
+
+.test-row .test-item img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  outline: 2px solid var(--main-color);
+  outline-offset: 2px;
+}
+
+.wcs_contents-wraper .indicators{
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  cursor: pointer;
+}
+
+.wcs_contents-wraper .indicators .dot{
+  width: 15px;
+  height: 15px;
+  margin: 0px 3px;
+  border: 3px solid #aaa;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.wcs_contents-wraper .indicators .active{
+  background-color: var(--main-color);
+}
+
+/* --------Animation for testimonials------ */
+
+@keyframes next1{
+  from{
+    left: 0%;
+  }
+  to{
+     left: -130%;
+  }
+}
+
+@keyframes next2{
+  from{
+    left: 130%;
+  }
+  to{
+     left: 0%;
+  }
+}
+
+/* previous */
+
+@keyframes prev1{
+  from{
+    left: 0%;
+  }
+  to{
+     left: 130%;
+  }
+}
+
+@keyframes prev2{
+  from{
+    left: -130%;
+  }
+  to{
+     left: 0%;
+  }
+}
+
+/* --------Case Study Style Section------ */
+
+.cs-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.case-study_img{
+  border: 5px solid rgba(128, 128, 128, 0.829);
+  width: 400px;
+  height: 500px
+}
+
+/* -------FAQ Style Section------ */
+
+.faq_header{
+  margin-bottom: 2.5rem;
+}
+
+.faq{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion .accordion-item{
+  border-bottom: 1px solid #6a6969c7;
+}
+
+.accordion .accordion-item[aria-expanded='true'] {
+  border-bottom: 1px solid var(--onboarding);
+}
+
+.accordion button{
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: var(--onboarding);
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.accordion button:hover,
+.accordion button:focus{
+  cursor: pointer;
+  color: #597a6c;
+}
+
+.accordion button:hover::after,
+.accordion button:focus::after{
+  cursor: pointer;
+  color: #597a6c;
+  border: 1px solid #597a6c;
+}
+
+.accordion button .accordion-title{
+  padding: 1rem 1.5rem 1rem 0;
+}
+
+.accordion button .icon{
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+.accordion button .icon::before{
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+
+.accordion button .icon::after{
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+
+.accordion button[aria-expanded='true'] {
+  color: #597a6c;
+}
+
+.accordion button[aria-expanded='true'] .icon::after{
+  width: 0;
+}
+
+.accordion button[aria-expanded='true'] + .accordion-content{
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion .accordion-content{
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-heght 200ms linear;
+  will-change: opacity, max-width;
+}
+
+.accordion .accordion-content p{
+  line-height: 1.9rem;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
 }
