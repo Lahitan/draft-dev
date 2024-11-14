@@ -1,27 +1,44 @@
 //-------------Hamburger Functionality
 
-// Select elements
-const navContainer = document.querySelector('.nav-list_container');
 const menuIcon = document.querySelector('.fa-bars');
 const closeIcon = document.querySelector('.fa-x');
+const navListContainer = document.querySelector('.nav_list');
 
-// Function to show the menu
+// Function to open the mobile menu
 function openMenu() {
-    navContainer.style.display = 'block';
+    navListContainer.style.display = 'flex';
     menuIcon.style.display = 'none';
     closeIcon.style.display = 'block';
 }
 
-// Function to hide the menu
+// Function to close the mobile menu
 function closeMenu() {
-    navContainer.style.display = 'none';
+    navListContainer.style.display = 'none';
     menuIcon.style.display = 'block';
     closeIcon.style.display = 'none';
 }
 
-// Event listeners for opening and closing menu
+// Open menu on clicking hamburger icon
 menuIcon.addEventListener('click', openMenu);
+
+// Close menu on clicking close icon
 closeIcon.addEventListener('click', closeMenu);
+
+// Adjust menu visibility on window resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 760) {
+        // If the screen width is 760px or above, reset the display styles
+        navListContainer.style.display = 'flex';  // Show menu for tablet and desktop
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'none';
+    } else {
+        // If the screen width is below 760px, hide menu and show hamburger icon
+        navListContainer.style.display = 'none';
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+    }
+});
+
 
 
 // ----------------What we do Functionality

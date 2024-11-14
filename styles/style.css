@@ -99,7 +99,128 @@ textarea:not([rows]) {
 
   /*Styling Navbar*/
 
-  .logo_text{
+  .logo_text {
+    font-size: var(--font-logo-mobile);
+    color: var(--main-color);
+    font-weight: 700;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.logo_text, a {
+  text-decoration: none;
+}
+
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.nav_list {
+  display: none; /* Hide the menu on mobile */
+  flex-direction: column; /* Stack items vertically on mobile */
+  gap: 1rem;
+  font-weight: 400;
+  background-color: #fff; /* White background for overlay */
+  padding: 2rem 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.nav_list a {
+  text-decoration: none;
+  color: var(--main-color);
+  transition: all 0.2s;
+  font-size: 1.2rem; /* Larger font for readability */
+}
+
+.nav_list a:hover {
+  color: #4a59ae;
+}
+
+.nav_list li {
+  list-style-type: none;
+}
+
+.nav_list .nav_list-btn {
+  background-color: #4a59ae;
+  color: var(--clear-text);
+  padding: 0.9rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.nav_list .nav_list-btn:hover {
+  background-color: var(--main-color);
+  color: var(--clear-text);
+}
+
+
+/* Hamburger menu icon (visible only on mobile) */
+.fa-bars {
+  font-size: var(--lg-font);
+  padding: 1rem;
+  cursor: pointer;
+  color: var(--main-color);
+  display: block; /* Ensure the hamburger is shown initially */
+}
+
+.fa-x {
+  display: none; /* Hide close icon by default */
+  font-size: var(--lg-font);
+  padding: 1rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+@media (min-width: 760px) {
+  .logo_text {
+      font-size: var(--font-logo);
+  }
+
+  .nav-list_container {
+      display: block;
+  }
+
+  .nav_list {
+    display: flex; /* Show the menu as a flexbox */
+    flex-direction: row; /* Horizontal layout on larger screens */
+    gap: 2rem;
+    position: static; /* Remove overlay behavior */
+    background-color: transparent;
+    height: auto;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.fa-bars, .fa-x {
+    display: none; /* Hide icons on larger screens */
+}
+
+}
+
+/* Desktop view */
+@media (min-width: 960px) {
+  .nav_container {
+      padding: 0 2rem;
+  }
+
+  .nav_list .nav_list-btn {
+      padding: 0.9rem 1.5rem;
+  }
+}
+
+  /* .logo_text{
     font-size: var(--font-logo-mobile);
     color: var(--main-color);
     font-weight: 700;
@@ -165,7 +286,8 @@ textarea:not([rows]) {
   /*media screen*/
 
   /*for tab*/
-  @media (min-width:760px)  {
+
+ /* @media (min-width:760px)  {
 
     .logo_text{
       font-size: var(--font-logo);
@@ -177,8 +299,8 @@ textarea:not([rows]) {
     .fa-bars{
       display: none;
     }
-  }
-
+  } */
+  
   /*Styling Hero Section*/
 
   .hero{
