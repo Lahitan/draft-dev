@@ -362,7 +362,7 @@ textarea:not([rows]) {
     margin: 0 auto;
   }
 
-  /*......why draft.dev section Styles......*/
+  /*......---------why draft.dev section Styles------......*/
 
 
 
@@ -370,12 +370,114 @@ textarea:not([rows]) {
     background-color: var(--body-background);
   }
 
+    .wd_heading,
+    .rpi_heading{
+      max-width: 650px;
+     margin: 0 auto;
+     line-height: 24px;
+    }
   
+    .wd_heading > h2,
+    .hiw_heading > h2,
+    .rpi_heading > h2,
+    .wcs_header > h2,
+    .cs-header > h2{
+      text-align: center;
+      font-size: var(--lg-font);
+      margin-top: 0;
+      padding-top: 2rem;
+      text-transform: uppercase;
+      color: var(--heading-color);
+    }
+  
+    .wd_heading > p,
+    .hiw_heading > p,
+    .rpi_heading > p{
+      text-align: center;
+      font-size: 1.7rem;
+      line-height: 1.2;
+      color: var(--pargraph-color);
+    }
+  
+    .wd_heading > hr,
+    .hiw_heading > hr,
+    .rpi-bookacall_div > hr{
+      width: 120px;
+      opacity: 0.3 ;
+       text-align: center;
+       border-color: var(--main-color);      
+       
+    }
+  
+    .wd_item-1,
+    .wd_item-2,
+    .wd_item-3{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 1.5rem;
+    }
+  
+    .wd-item-1_img, 
+    .wd-item-3_img{
+      justify-self: end;
+      margin-right: 2rem;
+    }
+  
+    /*......wd-item-1 & .wd-item-3 styling.....*/
+  
+    .wd-item-1_text, 
+    .wd-item-3_text {
+      justify-self: start;
+      padding: 1rem 1.5rem;
+      text-size-adjust: 100%;
+      text-decoration-thickness: auto;
+      text-decoration-style: solid;
+    }
+  
+    .wd-item-1_text > h3, 
+    .wd-item-3_text > h3,
+    .wd-item-2_text > h3{
+      text-transform: uppercase;
+      font-size: var(--sm-font);
+      color: var(--heading-color);
+    }
+  
+    .wd-item-1_text > p,
+    .wd-item-3_text > p,
+    .wd-item-2_text > p {
+      font-size: var(--xsm-font);
+      color: var(--pargraph-color);
+      font-family: 'Roboto' sans-serif;
+      font-weight: 400;
+      width: 528.5px;
+    }
+  
+     /*.......wd-item-2 styling.....*/
+  
+     .wd-item-2_text{
+      text-align: end;
+     padding: 1rem 2rem;
+      text-size-adjust: 100%;
+      text-decoration-thickness: auto;
+      text-decoration-style: solid;
+     }
+  
+     .wd-item-2_text > h3{
+      padding-right: 2rem;
+     }
+  
+     .wd-item-2_img{
+      margin-left: 2rem;
+     }
 
 
-  /*.....media screen.....*/
+  /*.....------------media screen-----------.....*/
 
-    /*....for mobile......*/
+    /*....-----------for mobile-------------......*/
+
+    @media (max-width: 760px) {
+
+  
     .wd_item-1,
     .wd_item-2,
     .wd_item-3{
@@ -383,6 +485,42 @@ textarea:not([rows]) {
       grid-template-columns: 1fr;
       padding: 1rem;
     }
+
+    .wd-item-1_img, 
+    .wd-item-3_img,
+    .wd-item-2_img{
+      justify-self: center;
+      margin-right: 0;
+    }
+
+    .wd-item-1_text,
+    .wd-item-2_text, 
+    .wd-item-3_text {
+      justify-self: center;
+      padding: 0.8rem 1rem;
+      text-size-adjust: 100%;
+      text-align: center;
+    }
+
+    .wd_item-2 {
+      grid-template-areas: 
+          "image"
+          "text";
+  }
+
+  /* Assign each element to a grid area */
+  .wd-item-2_img {
+      grid-area: image;
+      justify-self: center;
+      margin-right: 0;
+  }
+
+  .wd-item-2_text {
+      grid-area: text;
+      justify-self: center;
+      padding: 0.8rem 1rem;
+      text-align: center;
+  }
 
     .wd_heading > h2,
     .hiw_heading > h2,
@@ -407,16 +545,10 @@ textarea:not([rows]) {
       line-height: 1.0;
     }
 
-    /* .wd_heading > p,
-    .hiw_heading > p,
-    .rpi_heading > p{
-      text-align: center;
-      font-size: 1rem;
-      line-height: 1;
-    } */
 
     .wd_heading > hr,
-    .hiw_heading > hr{
+    .hiw_heading > hr,
+    .rpi-bookacall_div > hr{
       width: 60px;
       opacity: 0.3 ;
        text-align: center;
@@ -424,111 +556,24 @@ textarea:not([rows]) {
        
     }
   
-
-  /*....for desktop......*/
-
-  @media (min-width: 960px) {
-   
-
-  .wd_heading,
-  .rpi_heading{
-    max-width: 650px;
-   margin: 0 auto;
-   line-height: 24px;
   }
 
-  .wd_heading > h2,
-  .hiw_heading > h2,
-  .rpi_heading > h2,
-  .wcs_header > h2,
-  .cs-header > h2{
-    text-align: center;
-    font-size: var(--lg-font);
-    margin-top: 0;
-    padding-top: 2rem;
-    text-transform: uppercase;
-  }
+ 
+  @media (max-width: 610px){
+    .wd-item-1_text > h3, 
+    .wd-item-3_text > h3,
+    .wd-item-2_text > h3{
+      font-size: 1.1rem;
+    }
 
-  .wd_heading > p,
-  .hiw_heading > p,
-  .rpi_heading > p{
-    text-align: center;
-    font-size: 1.7rem;
-    line-height: 1.2;
-  }
-
-  .wd_heading > hr,
-  .hiw_heading > hr,
-  .rpi-bookacall_div > hr{
-    width: 120px;
-    opacity: 0.3 ;
-     text-align: center;
-     border-color: var(--main-color);
-     
-  }
-
-  .wd_item-1,
-  .wd_item-2,
-  .wd_item-3{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 1.5rem;
-  }
-
-  .wd-item-1_img, 
-  .wd-item-3_img{
-    justify-self: end;
-    margin-right: 2rem;
-  }
-
-  /*......wd-item-1 & .wd-item-3 styling.....*/
-
-  .wd-item-1_text, 
-  .wd-item-3_text {
-    justify-self: start;
-    padding: 1rem 1.5rem;
-    text-size-adjust: 100%;
-    text-decoration-thickness: auto;
-    text-decoration-style: solid;
-  }
-
-  .wd-item-1_text > h3, 
-  .wd-item-3_text > h3,
-  .wd-item-2_text > h3{
-    text-transform: uppercase;
-    font-size: var(--sm-font);
-    color: var(--heading-color);
-  }
-
-  .wd-item-1_text > p,
-  .wd-item-3_text > p,
-  .wd-item-2_text > p {
-    font-size: var(--xsm-font);
-    color: var(--pargraph-color);
-    font-family: 'Roboto' sans-serif;
-    font-weight: 400;
-    width: 528.5px;
-  }
-
-   /*.......wd-item-2 styling.....*/
-
-   .wd-item-2_text{
-    text-align: end;
-   padding: 1rem 2rem;
-    text-size-adjust: 100%;
-    text-decoration-thickness: auto;
-    text-decoration-style: solid;
-   }
-
-   .wd-item-2_text > h3{
-    padding-right: 2rem;
-   }
-
-   .wd-item-2_img{
-    margin-left: 2rem;
-   }
-  }
-
+    .wd-item-1_text > p,
+    .wd-item-3_text > p,
+    .wd-item-2_text > p {
+      font-size: 0.8rem;
+      width: 228.5px;
+    }
+  } 
+ 
  /*......How it works section Styles......*/
 
  .hiw{
@@ -601,8 +646,6 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 padding: 4rem;
-
-
 }
 
 .learn-more > p{
@@ -652,6 +695,73 @@ padding: 4rem;
   background: #77715b;
 }
 
+ /*....-----------for mobile-------------......*/
+ @media (max-width: 630px){
+
+  .hiw_button{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .hiw_button a{
+    font-size: 1.2rem;
+  }
+  
+  .hiw_button-1,
+  .hiw_button-2,
+  .hiw_button-3{
+    padding: 1rem 1.2rem;
+    margin: 0.9rem 0;
+  }
+
+ }
+
+ @media (max-width: 560px){
+
+  .step{
+    font-size: var(--xm-font);
+  }
+    
+  .num{
+    font-size: var(--xl-font);
+    margin-block-start: 2.5rem;
+  }
+  
+  .step-text-heading{
+    font-size:1.1rem;
+    line-height: 2rem;
+  }
+
+  .step-text{
+    font-size: 0.8rem;
+  }
+
+  .learn-more{
+    padding: 2rem;
+    }
+
+    .learn-more > p{
+      font-size: var(--xm-font);
+    }
+
+    .hiw_button{
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .hiw_button a{
+      font-size: 0.9rem;
+    }
+    
+    .hiw_button-1,
+    .hiw_button-2,
+    .hiw_button-3{
+      padding: 0.7rem 1rem;
+      margin: 0.9rem 0;
+    }
+ }
+
+
 /*......Request Pricing Information section Styles......*/
 
 
@@ -666,7 +776,6 @@ padding: 4rem;
 .otc-content-box-1,
 .otc-content-box-2{
   width: 300px;
-  /* height: 600px; */
   background-color: var(--clear-text);
   padding: 2rem;
   border-radius: 5px;
@@ -675,8 +784,6 @@ padding: 4rem;
 }
 
 .success-img{
-  /* width: 25px;
-  height: 25px; */
   max-width: 100%;
 }
 
@@ -730,11 +837,46 @@ padding: 4rem;
   border-color: rgba(144, 143, 143, 0.38);
 }
 
+/*......Tab and mobile Styles......*/
+
+@media (max-width: 640px){
+
+  .otc-content-box-1,
+.otc-content-box-2{
+  width: 220px;
+  background-color: var(--clear-text);
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+.success-img-div{
+  width: 18px;
+  height: 18px;
+}
+
+.success-content-p{
+ font-size: 0.7rem;
+}
+
+.otc-content-heading > h3{
+  font-size: 0.8;
+  margin-bottom: 2rem;
+}
+
+}
+
+@media (max-width: 640px){
+  .big-box{
+   flex-direction: column;
+   gap: 1rem;
+   align-items:center;
+  }
+}
+
 
 /*......What Our Clients Are Saying section Styles......*/
 
 .wcs{
-  /* width: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -815,6 +957,7 @@ padding: 4rem;
   background-color: var(--main-color);
 }
 
+
 /* --------Animation for testimonials------ */
 
 @keyframes next1{
@@ -855,6 +998,19 @@ padding: 4rem;
   }
 }
 
+/* --------Mobile and Tab Styles------ */
+
+@media (max-width: 640px){
+  .test-item > p{
+    font-size: 0.8rem;
+  }
+
+  .wcs_contents-wraper .indicators{
+    bottom: 5px;
+    
+  }
+}
+
 /* --------Case Study Style Section------ */
 
 .cs-container{
@@ -868,6 +1024,27 @@ padding: 4rem;
   border: 5px solid rgba(128, 128, 128, 0.829);
   width: 400px;
   height: 500px
+}
+
+/* --------Mobile and Tab Styles------ */
+
+@media (max-width: 640px){
+  .cs-container{
+    margin-top: 2rem;
+  }
+
+  .case-study_img{
+    width: 200px;
+    height: 250px
+  }
+
+  .rpi-bookacall_div > a{
+    margin-top: -60px;
+    padding: 1rem 1.8rem;
+
+  }
+
+
 }
 
 /* -------FAQ Style Section------ */
@@ -984,6 +1161,20 @@ padding: 4rem;
   margin: 2em 0;
 }
 
+/* --------Mobile and Tab Styles------ */
+
+@media (max-width: 640px){
+  .accordion button{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 420px){
+  .accordion button{
+    font-size: 0.8rem;
+  }
+
+}
 
 
 /* -------Footer Style Section------ */
@@ -1007,13 +1198,14 @@ background-color: var(--heading-color);
 
 .footer-header{
   padding-left: 2.2rem;
-  color: var(--clear-text);
+  color: rgb(166, 165, 165);
 }
 
 .footer-nav li a,
 .footer-nav li{
   color: var(--clear-text);
   padding: 0.3rem 0;
+  list-style: none;
 }
 
 .footer-nav li a:hover{
@@ -1034,4 +1226,38 @@ background-color: var(--heading-color);
 .my-title > p {
   text-align: center;
   color: rgb(166, 165, 165);
+}
+
+/* --------Mobile and Tab Styles------ */
+
+@media (max-width: 640px){
+  footer{
+    margin-top: 7rem;
+    }
+}
+
+@media (max-width: 440px){
+  footer{
+    margin-top: 7rem;
+    }
+
+    .footer{
+      padding: 1rem;
+    }
+
+    .footer-nav li a,
+.footer-nav li{
+  padding: 0.1rem 0;
+}
+.footer-img{
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+.footer-container .footer-content,
+.my-title > p
+{
+  font-size: 0.7rem;
+}
 }
