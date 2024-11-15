@@ -192,36 +192,55 @@ textarea:not([rows]) {
   position: absolute;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 70%;
   height: 100vh;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
   z-index: 10;
+ padding-left: 1rem;
+ padding-top: 10rem;
+ transition: transform 0.3s ease; 
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 
 /* Hamburger menu icon (visible only on mobile) */
 .fa-bars {
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
   padding: 1rem;
   cursor: pointer;
   display: block; /* Ensure the hamburger is shown initially */
+  filter: opacity(70%);
 }
 
 .fa-x {
   display: none; /* Hide close icon by default */
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
   padding: 1rem;
   position: absolute;
   top: 2rem;
   right: 2rem;
   cursor: pointer;
   z-index: 99;
-  filter: grayscale(100%);
+  filter: opacity(70%);
 }
 
+}
+
+@media (max-width: 450px){
+  .fa-bars {
+    height: 60px;
+    width: 60px;
+    
+  }
+
+  .fa-x {
+    display: none; /* Hide close icon by default */
+    height: 60px;
+    width: 60px;
+  }
 }
 
 /* End of Nav-Bar style for mobile */
@@ -327,8 +346,6 @@ textarea:not([rows]) {
     color: var(--main-color);
     margin-block-start: 0 ;
   }
-
-  /* for desktop*/
 
   .trusted_img{
     display: flex;
